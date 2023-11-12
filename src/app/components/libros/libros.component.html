@@ -1,0 +1,28 @@
+<div class="container">
+  <h2 class="card__title">{{titulo}}</h2>
+  <div class="row">
+    <ul *ngFor="let book of books" class="row_container">
+      <li
+        class="mensaje-activado">
+        <span class="row_span">{{book.id}}</span>
+        {{book.titulo}} - {{getFormatearFecha(book.fecha_obra)}}
+        <button (click)="deleteAutores(book)" class="delete">Delete</button>
+      </li>
+      <!-- {{incrementarConsecutivo()}} -->
+    </ul>
+
+      <button *ngIf="!books" [routerLink]="['/form']" class="btn_create">Create a New Book</button>
+  </div>
+
+
+  <button
+    *ngFor="let book of books"
+    (click)="toggleMenu(book.id)"
+    class="btn">{{book.titulo}}</button>
+    <ul *ngFor="let book of books" class="side-menu" [class.active]="menuActivo">
+      <li *ngIf="menuActivo === book.id" class="side_li">
+        <p>{{book.titulo}}</p>
+        <p>{{book.resumen}}</p>
+      </li>
+    </ul>
+</div>

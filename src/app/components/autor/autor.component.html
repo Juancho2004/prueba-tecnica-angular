@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="card">
+    <h2 class="card__title">
+      {{titulo}}
+    </h2>
+    <div class="row row2">
+      <!-- <h2>Insert Id</h2> -->
+      <!-- <input type="text" [(ngModel)]="libro.id" placeholder="Insert A Book" class="form_input"> -->
+
+      <h2>Insert your favorite author</h2>
+      <input type="text" [(ngModel)]="autor.nombre" placeholder="Insert A Name" class="form_input">
+      <h2>Enter your nationality</h2>
+      <input type="text" [(ngModel)]="autor.nacionalidad" placeholder="Insert A Nationality" class="form_input">
+        <button (click)="create()" class="btn">Save author</button>
+    </div>
+  </div>
+
+</div>

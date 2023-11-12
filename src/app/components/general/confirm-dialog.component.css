@@ -1,0 +1,19 @@
+.confirm{
+  padding: 30px 40px;
+}
+
+.confirm_btns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    && button{
+      border: none;
+      outline: none;
+      padding: 10px 20px;
+      border-radius: 35px;
+      background-color: darkgrey;
+    }
+}
+
+
+

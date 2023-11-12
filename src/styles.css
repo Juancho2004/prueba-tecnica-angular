@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  /* background: rgb(53,92,125);
+  background: radial-gradient(circle, rgba(53,92,125,1) 0%, rgba(108,91,123,1) 52%, rgba(192,108,132,1) 100%); */
+  background-color: #fff;
+  font-family: 'Rubik', sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

@@ -1,0 +1,28 @@
+<nav class="nav">
+  <button type="button" [routerLink]="['/form']" class="nav_btn">Insert a Book</button>
+  <button type="button" [routerLink]="['/autor']" class="nav_btn">Insert a New Autor</button>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <ul>
+        <li
+        *ngFor="let employee of employeeData"
+        class="mensaje-activado"
+        >
+
+        <div [routerLink]="['/libros/autor', employee?.id]">
+          <span
+          class="row_span">{{consecutivo}}</span>
+          {{employee.nombre}} - {{employee.nacionalidad}}
+        </div>
+
+        <div class="row_btns">
+          <button type="button" name="button" class="row_btn" [routerLink]="['/editar', employee.id]">Edit</button>
+          <button type="button" class="row_btn" (click)="deleteAutores(employee)">Delete</button>
+        </div>
+        {{ incrementarConsecutivo() }}
+        </li>
+    </ul>
+  </div>
+</div>
